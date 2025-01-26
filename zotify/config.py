@@ -63,7 +63,7 @@ CONFIG_PATHS = {
 OUTPUT_PATHS = {
     "album": "{album_artist}/{album}/{track_number}. {artists} - {title}",
     "podcast": "{podcast}/{episode_number} - {title}",
-    "playlist_track": "{playlist}/{artists} - {title}",
+    "playlist_track": "{artists} - {title}",
     "playlist_episode": "{playlist}/{episode_number} - {title}",
 }
 
@@ -123,7 +123,7 @@ CONFIG_VALUES = {
         "help": "File layout for saved podcasts",
     },
     DOWNLOAD_QUALITY: {
-        "default": "auto",
+        "default": "very-high",
         "type": Quality.from_string,
         "choices": list(Quality),
         "args": ["--download-quality"],
@@ -137,7 +137,7 @@ CONFIG_VALUES = {
         "help": "Image size of track's cover art",
     },
     AUDIO_FORMAT: {
-        "default": "vorbis",
+        "default": "mp3",
         "type": AudioFormat.from_string,
         "choices": list(AudioFormat),
         "args": ["--audio-format"],
